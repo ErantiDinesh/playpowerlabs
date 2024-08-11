@@ -36,3 +36,143 @@
     transform: rotate(360deg);
   }
 }
+
+/* src/App.css */
+
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+body.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+.App {
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+/* Buttons */
+button {
+  padding: 10px 15px;
+  font-size: 14px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button + button {
+  margin-left: 10px;
+}
+
+@media (max-width: 600px) {
+  button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  button + button {
+    margin-left: 0;
+  }
+}
+
+/* Input Field */
+input {
+  padding: 10px;
+  font-size: 14px;
+  width: calc(100% - 100px);
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+  input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+/* TimeZoneDisplay Component */
+.TimeZoneDisplay {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+}
+
+@media (max-width: 600px) {
+  .TimeZoneDisplay {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* DatePicker */
+.react-datepicker-wrapper {
+  width: 100%;
+}
+
+.react-datepicker__input-container {
+  width: 100%;
+}
+
+.react-datepicker__input-container input {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Dark Mode Adjustments */
+body.dark-mode .App {
+  background-color: #444;
+  color: #fff;
+}
+
+body.dark-mode input {
+  background-color: #555;
+  color: #fff;
+  border: 1px solid #666;
+}
+
+body.dark-mode .TimeZoneDisplay {
+  background-color: #555;
+}
+
+body.dark-mode button {
+  background-color: #007bff;
+  color: white;
+}
